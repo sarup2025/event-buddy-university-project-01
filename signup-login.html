@@ -15,93 +15,12 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
     <link rel="stylesheet" href="/style.css" />
 
+    <!-- external css -->
+    <link rel="stylesheet" href="css/signup-login.css">
+
     <!-- internal css  -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        #logreg-forms {
-            width: 412px;
-            margin: 10vh auto;
-            background-color: #f3f3f3;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        #logreg-forms form {
-            width: 100%;
-            max-width: 410px;
-            padding: 15px;
-            margin: auto;
-        }
-
-        #logreg-forms .form-control {
-            position: relative;
-            box-sizing: border-box;
-            height: auto;
-            padding: 10px;
-            font-size: 16px;
-        }
-
-        #logreg-forms .form-control:focus {
-            z-index: 2;
-        }
-
-        #logreg-forms input[type="email"],
-        #logreg-forms input[type="text"],
-        #logreg-forms input[type="password"],
-        #logreg-forms input[type="email"],
-        #logreg-forms input[type="text"],
-        #logreg-forms input[type="password"],
-        #logreg-forms input[type="email"],
-        #logreg-forms input[type="text"],
-        #logreg-forms input[type="password"],
-        #logreg-forms input[type="time"],
-        #logreg-forms input[type="date"],
-        #logreg-forms textarea,
-        #logreg-forms button[type="submit"],
-        #logreg-forms button[type="button"],
-        #logreg-forms button[type="reset"] {
-            border-radius: 10px;
-        }
-
-        #logreg-forms button[type="submit"],
-        #logreg-forms button[type="reset"] {
-            margin-top: 10px;
-        }
-
-        #logreg-forms a {
-            display: block;
-            padding-top: 10px;
-            color: lightseagreen;
-        }
-
-        #logreg-form .lines {
-            width: 200px;
-            border: 1px solid red;
-        }
-
-        #logreg-forms .form-reset,
-        #logreg-forms .form-signup {
-            display: none;
-        }
-
-
-        #logreg-forms input,
-        #logreg-forms input,
-        #logreg-forms input,
-        #logreg-forms textarea {
-            margin-bottom: 2px;
-        }
-
-        @media screen and (max-width: 500px) {
-            #logreg-forms {
-                width: 300px;
-            }
-        }
+ 
     </style>
 
     <!-- title of the page  -->
@@ -140,6 +59,8 @@
             <button class="btn btn-primary btn-block" type="button" id="btn-signup">
                 <i class="fas fa-user-plus"></i> Creat New Event
             </button>
+
+            <a href="index.html"><i class="fas fa-angle-left"></i> Cancel</a>
 
         </form>
 
@@ -231,31 +152,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <script>
-
-        // toggleResetPswd script 
-        function toggleResetPswd(e) {
-            e.preventDefault();
-            $("#logreg-forms .form-signin").toggle(); // display:block or none
-            $("#logreg-forms .form-reset").toggle(); // display:block or none
-        }
-
-        // toggleSignUp script 
-        function toggleSignUp(e) {
-            e.preventDefault();
-            $("#logreg-forms .form-signin").toggle(); // display:block or none
-            $("#logreg-forms .form-signup").toggle(); // display:block or none
-        }
-
-        $(() => {
-            // Login Register Form
-            $("#logreg-forms #forgot_pswd").click(toggleResetPswd);
-            $("#logreg-forms #cancel_reset").click(toggleResetPswd);
-            $("#logreg-forms #btn-signup").click(toggleSignUp);
-            $("#logreg-forms #cancel_signup").click(toggleSignUp);
-        });
-    </script>
-
+        <script src="js/signup-login.js"></script>
 
 </body>
 
